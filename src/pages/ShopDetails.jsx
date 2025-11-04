@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function ShopDetails() {
-  const { shops } = useGeneral();
+  const { shops, isOpen, setIsOpen } = useGeneral();
   const { id } = useParams()
 
   const shop = shops.find((s) => s.id === parseInt(id));
@@ -15,12 +15,12 @@ export default function ShopDetails() {
 
   
   return (
-    <div className='bg-gray-50  min-h-screen pt-20 pb-20'>
+    <div onClick={() => setIsOpen(false)} className='bg-gray-50  min-h-screen pt-20 pb-20'>
       <h1 className="text-3xl text-center text-blue-600 ">Shop Detail</h1>
 
       <div className="">
       <div className='mt-16 w-4/5 md:w-3/5 sm:w-5/6 mx-auto mb-16'>
-        <div className='bg-white rounded-lg shadow-md p-6 justify-between flex flex-col md:flex-row gap-6'>
+        <div onClick={() => setIsOpen(false)} className='bg-white rounded-lg shadow-md p-6 justify-between flex flex-col md:flex-row gap-6'>
           <img src={shop.image.replace('./', '/')} alt={shop.name} className="w-full md:w-1/3 object-cover h-64 md:h-auto rounded-md" />
           <div className="flex flex-col justify-between md:w-2/3">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">{shop.name}</h2>
@@ -39,7 +39,7 @@ export default function ShopDetails() {
         {/* featured products */}
         {
           shop.products.map((product) => (
-          <Link to={`/product/${product.id}`} key={product.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
+          <Link to={`/product/${product.id}`} onClick={() => setIsOpen(false)} key={product.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
             <img src={product.image.replace('./', '/')} alt={product.name} className="w-full object-cover h-48 mb-4" />
             <h3 className="text-lg font-medium text-blue-800">{product.name}</h3>
             <p className="text-sm text-gray-500">₦{product.price}</p>

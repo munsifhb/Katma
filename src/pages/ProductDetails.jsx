@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function ProductDetails() {
-  const { allProducts, addCart, cart } = useGeneral();
+  const { allProducts, addCart, cart, isOpen, setIsOpen } = useGeneral();
   const { id } = useParams();
 
   // const product = allProducts.find(p => p.id === parseInt(id));
@@ -16,13 +16,13 @@ export default function ProductDetails() {
   }
   
   return (
-    <div className='bg-gray-200  min-h-screen pt-20 pb-20'>
+    <div className='bg-gray-200  min-h-screen pt-20 pb-20' onClick={() => setIsOpen(false)}>
       <h1 className="text-3xl text-center text-blue-600 ">Product Detail</h1>
 
       <div className="">
 
       <div className='mt-16 w-4/5 md:w-3/5 sm:w-5/6 mx-auto mb-16'>
-        <div className='bg-white rounded-lg shadow-md p-6 justify-between flex flex-col md:flex-row gap-6'>
+        <div onClick={() => setIsOpen(false)} className='bg-white rounded-lg shadow-md p-6 justify-between flex flex-col md:flex-row gap-6'>
           <img src={product.image.replace('./', '/')} alt={product.name} className="w-full md:w-1/3 object-cover h-64 md:h-auto rounded-md" />
           <div className="flex flex-col justify-between md:w-2/3">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">{product.name}</h2>

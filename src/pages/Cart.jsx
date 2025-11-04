@@ -3,11 +3,11 @@ import { useGeneral } from '../context/GeneralContext'
 
 
 export default function Cart() {
-  const { cart, clearCart, total, removeCart, addCart, subCart } = useGeneral();
+  const { cart, clearCart, total, removeCart, addCart, subCart, isOpen, setIsOpen } = useGeneral();
   const [quantity, setQuantity] = useState(1);
    
   return (
-    <div className='bg-gray-200 min-h-screen py-20 flex flex-col items-center gap-6'>
+    <div onClick={() => setIsOpen(false)} className='bg-gray-200 min-h-screen py-20 flex flex-col items-center gap-6'>
       <div className="w-4/5 mx-auto flex justify-between">
       <div className=" flex gap-1 flex-col">
         <h1 className="text-xl text-blue-600 text-start md:text-xl sm:text-lg">Cart Items: {cart.length}</h1>

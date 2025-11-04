@@ -6,6 +6,7 @@ export const GeneralContext = createContext();
 
 export const GeneralProvider = ({ children }) => {
     const [search, setSearch] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
     const [cart, setCart] = useState(() => {
       const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
@@ -97,7 +98,7 @@ const allProducts = useMemo(() => {
   );
 
     return (
-        <GeneralContext.Provider value={{ shops, search,total, subCart, cart, setCart, clearCart, removeCart, addCart, setSearch, allProducts, filterShops, filterProducts }}>
+        <GeneralContext.Provider value={{ shops, isOpen, setIsOpen,  search,total, subCart, cart, setCart, clearCart, removeCart, addCart, setSearch, allProducts, filterShops, filterProducts }}>
             {children}
         </GeneralContext.Provider>
     );

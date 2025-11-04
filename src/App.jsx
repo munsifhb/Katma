@@ -14,15 +14,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/Footer';
 
 export default function App() {
-  const { shops } = useGeneral();
+  const { shops, isOpen, setIsOpen } = useGeneral();
   
   return (
-    <div>
+    <div onClick={() => setIsOpen(false)}>
       <GeneralProvider>
       <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home onClick={() => setIsOpen(false)} />} />
         <Route path='/about' element={<About />} />
         <Route path='/Products' element={<Products />} />
         <Route path='/Shops' element={<Shops />} />

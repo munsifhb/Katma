@@ -10,10 +10,10 @@ export default function Home() {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat"
   }
-  const { shops, setSearch, search, filterShops, filterProducts, allProducts } = useGeneral();
+  const { shops, setSearch, search, filterShops, filterProducts, allProducts, isOpen, setIsOpen } = useGeneral();
 
   return (
-    <div className="">
+    <div className="" onClick={() => setIsOpen(false)}>
     <div className='py-32 bg-gray-100 h-fit ' style={myStyle}>
         <div className='text-center'>
         <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder='search shops and products...' className=" md:hidden sm:flex text-lg text-gray-800 px-3 w-4/5 bg-gray-50 h-8 rounded-sm border-b-2 focus:outline-none shadow-md border-gray-800 mx-auto" />
@@ -42,7 +42,7 @@ export default function Home() {
       <h2 className='text-2xl font-semibold text-blue-600 mb-6'>Featured Shops</h2>
       <div className='grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-5'>
         {shops.slice(0,3).map((shop) => (
-          <Link to={`/shop/${shop.id}`} key={shop.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
+          <Link to={`/shop/${shop.id}`} onClick={() => setIsOpen(false)} key={shop.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
             <img src={shop.image} alt={shop.name} className="w-full object-cover h-48 mb-4" />
             <h3 className="text-lg font-medium text-blue-800">{shop.name}</h3>
             <p className="text-sm text-gray-500">Category: {shop.category}</p>
@@ -59,7 +59,7 @@ export default function Home() {
       <div className='grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-5'>
         {
           allProducts.slice(3,12).map((product) => (
-          <Link to={`/product/${product.id}`} key={product.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
+          <Link to={`/product/${product.id}`} onClick={() => setIsOpen(false)} key={product.id} className="bg-white rounded-lg shadow-md p-2 overflow-hidden flex flex-col items-center hover:shadow-xl transition-shadow duration-300 ease-in-out">
             <img src={product.image} alt={product.name} className="w-full object-cover h-48 mb-4" />
             <h3 className="text-lg font-medium text-blue-800">{product.name}</h3>
             <p className="text-sm text-gray-500">₦{product.price}</p>

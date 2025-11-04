@@ -3,8 +3,8 @@ import { Link as LINK } from 'react-router-dom';
 import { useGeneral } from '../context/GeneralContext';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { shops, setSearch, search, cart, filterProducts } = useGeneral();
+  
+  const { shops, setSearch, search, cart, isOpen, setIsOpen, filterProducts } = useGeneral();
   return (
     <div>
       {/* large secreen navbar */}
@@ -24,7 +24,7 @@ export default function Navbar() {
           }
         </div>
         
-        <nav className={`${!isOpen ? 'opacity-0 overflow-hidden flex transition-all duration-300 ease-in-out  gap-4 flex-col absolute top-16 right-52 bg-gray-50 shadow-md p-5 w-32 rounded-sm' : 'transition-all duration-300 ease-in-out  overflow-hidden flex gap-4 flex-col absolute top-16 right-52 opacity-100 bg-gray-50 shadow-md p-5 w-32 rounded-sm'}flex transition-all duration-300 ease-in-out overflow-hidden gap-4 flex-col absolute top-16 right-52 bg-gray-50 shadow-md p-5 w-32 rounded-sm opacity-0 `} >
+        <nav className={`${!isOpen ? 'opacity-0 overflow-hidden flex transition-all duration-300 ease-in-out  gap-4 flex-col absolute top-16 right-64 bg-gray-50 shadow-md p-5 w-32 rounded-sm' : 'transition-all duration-300 ease-in-out  overflow-hidden flex gap-4 flex-col absolute top-16 right-64 opacity-100 bg-gray-50 shadow-md p-5 w-32 rounded-sm'}flex transition-all duration-300 ease-in-out overflow-hidden gap-4 flex-col absolute top-16 right-64 bg-gray-50 shadow-md p-5 w-32 rounded-sm opacity-0 `} >
           
         <LINK to="/" className='font-serif text-lg text-blue-900 transition-colors hover:text-blue-700'>Home</LINK>
         <LINK to="/Products" className='font-serif text-lg text-blue-900 transition-colors hover:text-blue-700'>Products</LINK>
