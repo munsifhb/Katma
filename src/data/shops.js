@@ -77,7 +77,7 @@ export const shops = [
       quantity: 1,
       shopId: 5,
       shopName: "Royal Jewels",
-      description: "A stunning gold-plated necklace that adds a graceful shine to any outfit."
+      descrition: "A stunning gold-plated necklace that adds a graceful shine to any outfit."
     },
     {
       id: 19,
@@ -97,7 +97,7 @@ export const shops = [
       quantity: 1,
       shopId: 5,
       shopName: "Royal Jewels",
-      description: "Elegant diamond-inspired earrings that shimmer with every turn."
+      descrition: "Elegant diamond-inspired earrings that shimmer with every turn."
     },
     {
       id: 21,
@@ -107,7 +107,7 @@ export const shops = [
       quantity: 1,
       shopId: 5,
       shopName: "Royal Jewels",
-      description: "A chic rose gold ring featuring a delicate charm symbolizing beauty and love."
+      descrition: "A chic rose gold ring featuring a delicate charm symbolizing beauty and love."
     },
     {
       id: 22,
@@ -117,7 +117,7 @@ export const shops = [
       quantity: 1,
       shopId: 5,
       shopName: "Royal Jewels",
-      description: "A classic pearl pendant necklace that brings timeless elegance to your collection."
+      descrition: "A classic pearl pendant necklace that brings timeless elegance to your collection."
     }
   ]
 },
@@ -138,7 +138,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "A hydrating face cream that brightens and evens your skin tone for a natural glow."
+      descrition: "A hydrating face cream that brightens and evens your skin tone for a natural glow."
     },
     {
       id: 24,
@@ -148,7 +148,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Deeply nourishing body lotion that keeps your skin smooth and moisturized all day."
+      descrition: "Deeply nourishing body lotion that keeps your skin smooth and moisturized all day."
     },
     {
       id: 25,
@@ -158,7 +158,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Long-lasting matte lipstick with a rich, velvety finish for all-day confidence."
+      descrition: "Long-lasting matte lipstick with a rich, velvety finish for all-day confidence."
     },
     {
       id: 26,
@@ -168,7 +168,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Gentle face cleanser that removes dirt and makeup while keeping your skin fresh and soft."
+      descrition: "Gentle face cleanser that removes dirt and makeup while keeping your skin fresh and soft."
     },
     {
       id: 27,
@@ -178,7 +178,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Cooling aloe vera gel that hydrates and soothes irritated skin naturally."
+      descrition: "Cooling aloe vera gel that hydrates and soothes irritated skin naturally."
     },
     {
       id: 28,
@@ -188,7 +188,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Refreshing rose water toner that refines pores and restores your skin’s balance."
+      descrition: "Refreshing rose water toner that refines pores and restores your skin’s balance."
     },
     {
       id: 29,
@@ -198,7 +198,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Purifying mask that deeply cleanses your skin, removing oil and impurities."
+      descrition: "Purifying mask that deeply cleanses your skin, removing oil and impurities."
     },
     {
       id: 30,
@@ -208,7 +208,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Lightweight foundation that gives smooth, natural coverage with a radiant finish."
+      descrition: "Lightweight foundation that gives smooth, natural coverage with a radiant finish."
     },
     {
       id: 31,
@@ -218,7 +218,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Nourishing serum that adds shine and reduces frizz, leaving your hair silky smooth."
+      descrition: "Nourishing serum that adds shine and reduces frizz, leaving your hair silky smooth."
     },
     {
       id: 32,
@@ -228,7 +228,7 @@ export const shops = [
       quantity: 1,
       shopId: 6,
       shopName: "GlowNest",
-      description: "Exfoliating body scrub with natural gold particles that brighten and polish your skin."
+      descrition: "Exfoliating body scrub with natural gold particles that brighten and polish your skin."
     }
   ]
 }
